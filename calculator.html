@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CALCULATOR</h1>
+        <table border="2">
+            <tr>
+                <td colspan="3"><input type="text" name="num" id="input"></td>
+                <td><button onclick="clr()">C</button></td>
+            </tr>
+            <tr>
+                <td><button value="1" onclick="view('1')">1</button></td>
+                <td><button  value="2" onclick="view('2')">2</button></td>
+                <td><button  value="3" onclick="view('3')">3</button></td>
+                <td><button  value="/" onclick="view('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button  value="4" onclick="view('4')">4</button></td>
+                <td><button  value="5" onclick="view('5')">5</button></td>
+                <td><button  value="6" onclick="view('6')">6</button></td>
+                <td><button  value="-" onclick="view('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button  value="7" onclick="view('7')">7</button></td>
+                <td><button  value="8" onclick="view('8')">8</button></td>
+                <td><button  value="9" onclick="view('9')">9</button></td>
+                <td><button  value="+" onclick="view('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button  value="." onclick="view('.')">.</button></td>
+                <td><button  value="0" onclick="view('0')">0</button></td>
+                <td><button value="=" onclick="compute()">=</button></td>
+                <td><button  value="*" onclick="view('*')">*</button></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function view(num){
+            document.getElementById('input').value+=num
+        }
+        function compute(){
+            var a,b
+            a=document.getElementById('input').value
+            b=eval(a)
+            document.getElementById('input').value=b
+        }
+        function clr(){
+            document.getElementById('input').value=' '
+        }
+
+    </script>
+</body>
+</html>

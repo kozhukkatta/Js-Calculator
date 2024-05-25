@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addition.css">
+    <title>calculator</title>
+</head>
+<body>
+    <h2><u>CALCULATOR</u></h2>
+    <label for="">Enter first number :</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" name="" id="fn"><br>
+    <label for="">Enter second number :</label>
+    <input type="number" name="" id="sn">
+    <br><br>
+    
+    <button type="" onclick="add()">Add</button> <br><br>
+    <label for="">Result :</label>
+    <input type="number" name="" id="out">
+    <script>
+    var a,b,c
+       function add() {
+        a=Number(document.getElementById('fn').value)
+        b=Number(document.getElementById('sn').value)
+        c=a+b
+
+        document.getElementById('out').value=c
+       }
+    </script>
+</body>
+</html>
